@@ -24,14 +24,17 @@ namespace CadastroCliente.Services
 
         public Users GetUsersId(int id)
         {
+          
             return _context.Users.FirstOrDefault(e => e.IdUser == id);
         }
 
-        public void Insert(Users users)
+        public int Insert(Users users)
         {
            _context.Users.Add(users);
-           _context.SaveChanges();
-           
+           _context.SaveChanges();          
+
+            return users.IdUser;
+
         }
 
         public void UpdateUser(Users users)

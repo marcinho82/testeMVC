@@ -31,7 +31,7 @@ namespace CadastroCliente.Controllers
         public IActionResult Details(int id)
         {                 
 
-            return View(_user.GetUsersId(id));
+            return View(_address.GetAddress(id));
         }
 
         // GET: Users/Create
@@ -50,7 +50,9 @@ namespace CadastroCliente.Controllers
           
             if (ModelState.IsValid)
             {
-               _user.Insert(address.Users);
+              var id = _user.Insert(address.Users);
+                address.IdUser = id;
+               _address.Insert(address);
             
             }           
             return RedirectToAction("Index", _user.GetUsers());
@@ -58,8 +60,8 @@ namespace CadastroCliente.Controllers
 
         // GET: Users/Edit/5
         public IActionResult Edit(int id)
-        {            
-            return View(_user.GetUsersId(id));
+        {
+            return View(_address.GetAddress(id));
         }
 
         // POST: Users/Edit/5
@@ -72,9 +74,10 @@ namespace CadastroCliente.Controllers
             if (ModelState.IsValid)
             {
                 _user.UpdateUser(address.Users);
+                _address.Update(address);
                 return RedirectToAction(nameof(Index));
             }
-            return View(address.Users);
+            return View(address);
         }      
 
        

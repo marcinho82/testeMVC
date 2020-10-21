@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\CadastroCliente\\CadastroCliente\\CadastroCliente.csproj": {}
+    "C:\\Users\\user\\source\\repos\\testeMVC\\CadastroCliente\\CadastroCliente.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\CadastroCliente\\CadastroCliente\\CadastroCliente.csproj": {
+    "C:\\Users\\user\\source\\repos\\testeMVC\\CadastroCliente\\CadastroCliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\CadastroCliente\\CadastroCliente\\CadastroCliente.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\testeMVC\\CadastroCliente\\CadastroCliente.csproj",
         "projectName": "CadastroCliente",
-        "projectPath": "C:\\Users\\user\\source\\repos\\CadastroCliente\\CadastroCliente\\CadastroCliente.csproj",
+        "projectPath": "C:\\Users\\user\\source\\repos\\testeMVC\\CadastroCliente\\CadastroCliente.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\CadastroCliente\\CadastroCliente\\obj\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\testeMVC\\CadastroCliente\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

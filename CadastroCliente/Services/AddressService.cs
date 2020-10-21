@@ -1,6 +1,7 @@
 ﻿using CadastroCliente.CadastroContext;
 using CadastroCliente.Interfaces;
 using CadastroCliente.Models;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,10 @@ namespace CadastroCliente.Services
 
         public Address GetAddress(int id)
         {
-          return _context.Addresses.FirstOrDefault(e => e.IdAddress == id);
+            var _add =  _context.Addresses.FirstOrDefault(e => e.IdUser == id);
+            var user = _context.Users.FirstOrDefault(e => e.IdUser == id);
+            _add.Users = user;
+            return _add;
         }
 
         public void Insert(Address address)

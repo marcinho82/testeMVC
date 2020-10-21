@@ -19,8 +19,9 @@ namespace CadastroCliente.Models
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-        [ForeignKey("User")]
+        [ForeignKey("IdUser")]
         public int IdUser { get; set; }
+        [NotMapped]
         public virtual Users Users { get; set; }
     }
 }

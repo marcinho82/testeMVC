@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CadastroCliente.Models.Users>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome Completo
+            </th>
+            <th>
+               Data de Nascimento
+            </th>
+            <th>
+               CPF
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdUser">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdUser">Detalhes</a> |
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
